@@ -71,7 +71,7 @@
 			<div class="control-group">
 			<label class="control-label" for="inputPassword">Foto:</label>
 			<div class="controls">
-			<input type="file" id="inputPassword" name="imagen"  placeholder="no mayor a 300Kb">
+			<input type="file" id="inputPassword" name="imagen"  size="50">
 			</div>
 		</div>
 				

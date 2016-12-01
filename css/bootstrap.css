@@ -2004,7 +2004,32 @@ legend + .control-group {
 .form-horizontal .form-actions {
   padding-left: 180px;
 }
+.fondo_carnet {
+ 
+  
+  margin-bottom: 1px;
+  background-image: url(../images/5.jpg);
+  opacity: .8;
+  background-repeat: no-repeat;
+  background-color: #fff;
 
+}
+.cedula {
+  float: right;
+  padding-right: 40px;
+  margin-bottom: 20px;
+}
+.foto_carnet {
+  width: 120px;
+  height: 120px;
+  background-color: gray;
+  float: right;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+.margen {
+  margin-left: 10px;
+}
 table {
   max-width: 100%;
   background-color: transparent;

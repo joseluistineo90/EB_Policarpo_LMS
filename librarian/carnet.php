@@ -24,17 +24,16 @@
 									
 									?>
 									<hr>
-                                    <div class =""><h4 align="center"><b>BIBLIOTECA PUBLICA RAFAEL VICENTE EGUI</b></h4>
-                                    <h6 align="center">(Carnet de usuario)</h6></div>
-                                     
+                                    <div class ="fondo_carnet"><h4 align="center"><b><br>BIBLIOTECA PUBLICA RAFAEL VICENTE EGUI</b></h4>
+                                    <h5 align="center">(Carnet de usuario)</h5>
 									<div class="del<?php echo $id ?>">
-                                    <div class=""><?php echo $row['imagen'];?></div>
-                                    <div><b>Nombres</b></div><div><?php echo $row['firstname_carnet']." ". $row['lastname_carnet'];?></div>
-								    <div><b> C.I </b></div><div><?php echo $row['cedula_carnet'];?></div> 
-									<div><b>DIRECCION</b></div><div><?php echo $row['address_carnet']; ?></div> 
-                                    <div><b>Email</b></div><div><?php echo $row['email_carnet']; ?> </div>
-									<div><b>Tlf </b></div><div><?php echo $row['contact_carnet'];?></div>
-									<div><b>Grado</b></div><div><?php echo $row['year_level_carnet'];?></div>
+                                    <div class="foto_carnet"><?php echo $row['imagen'];?></div><br>
+                                    <div class="margen"><b>Nombres</b></div><div class="margen"><?php echo $row['firstname_carnet']." ". $row['lastname_carnet'];?></div>
+								    <div class="cedula"><b> C.I </b><?php echo $row['cedula_carnet'];?></div> 
+									<div class="margen"><b>DIRECCION</b></div><div class="margen"><?php echo $row['address_carnet']; ?></div> 
+                                    <div class="margen"><b>Email</b></div><div class="margen"><?php echo $row['email_carnet']; ?> </div>
+									<div class="margen"><b>Tlf </b></div><div class="margen"><?php echo $row['contact_carnet'];?></div><div class="margen"><b>Grado</b></div><div class="margen"><?php echo $row['year_level_carnet'];?></div>
+									</div>
 									
 
 									<?php include('toolttip_edit_delete.php'); ?>
@@ -44,7 +43,10 @@
 										<a  rel="tooltip"  title="Editar" id="e<?php echo $id; ?>" href="carnet_edit.php<?php echo '?id='.$id; ?>" class="btn btn-success"><i class="icon-pencil icon-large"></i></a>
 										
                                     </td>
-									 
+									       <td width="20"><p><strong>Marque aqu&iacute; primero</strong></p>
+                                                <input id="" class="uniform_on" name="selector[]" type="checkbox" value="<?php echo $id; ?>" >
+                                                
+                                    </td>
                                     </div>
 									<?php  }  ?>
                                 </tbody>
@@ -55,11 +57,11 @@
 	
 <script>		
 $(".uniform_on").change(function(){
-    var max= 3;
+    var max= 1;
     if( $(".uniform_on:checked").length == max ){
 	
         $(".uniform_on").attr('disabled', 'disabled');
-		         alert('Sólo se permiten 3 libros Máximo por usuario');
+		         alert('SOLO SE PERMITE IMPRIMIR UN CARNET POR VEZ, BORRE LOS QUE YA IMPRIMIO');
         $(".uniform_on:checked").removeAttr('disabled');
 		
     }else{
