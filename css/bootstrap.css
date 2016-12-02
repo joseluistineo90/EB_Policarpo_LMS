@@ -2004,11 +2004,15 @@ legend + .control-group {
 .form-horizontal .form-actions {
   padding-left: 180px;
 }
-.fondo_carnet {
- 
-  
+.centrar {
+  text-align: center;
+}
+.logo_carnet {
+
+}
+.fondo_carnet {  
   margin-bottom: 1px;
-  background-image: url(../images/5.jpg);
+   background-image: url(../images/5.jpg);
   opacity: .8;
   background-repeat: no-repeat;
   background-color: #fff;

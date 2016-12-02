@@ -6,12 +6,12 @@
 			<div class="">	
 				<div  class="span6">	
 
-						<div class="alert alert-info"><strong>CARNETS</strong></div>
+						<div class="alert alert-info"><strong>CARNETS (BORRE despu&eacute;s de imprimir)</strong></div>
 						<div class="pull-right">
 								<a href="" onclick="window.print()" class="btn btn-info"><i class="icon-print icon-large"></i> Imprima</a>
 								</div>
 
-                            <table   border="1" class="table" id="">
+                            <table   border="0" class="table" id="">
                             <p><a href="carnet_add.php" class="btn btn-success"><i class="icon-plus"></i>&nbsp;Agregar Carnet Usuario</a></p>
 							<div class="pull-right">
 								                                
@@ -24,8 +24,9 @@
 									
 									?>
 									<hr>
-                                    <div class ="fondo_carnet"><h4 align="center"><b><br>BIBLIOTECA PUBLICA RAFAEL VICENTE EGUI</b></h4>
-                                    <h5 align="center">(Carnet de usuario)</h5>
+                                    <div class="logo_carnet" ></div>
+                                    <div class ="fondo_carnet"><p class="centrar"><b>BIBLIOTECA PUBLICA RAFAEL VICENTE EGUI</b></p>
+                                    <h4 class="centrar">(CARNET DE USUARIO)</h4>
 									<div class="del<?php echo $id ?>">
                                     <div class="foto_carnet"><?php echo $row['imagen'];?></div><br>
                                     <div class="margen"><b>Nombres</b></div><div class="margen"><?php echo $row['firstname_carnet']." ". $row['lastname_carnet'];?></div>
@@ -39,22 +40,26 @@
 									
 
 									<?php include('toolttip_edit_delete.php'); ?>
-                                    <td width="20" padding="100">
+                                    <td width="200" padding="100">
                                         <a rel="tooltip"  title="Borrar" id="<?php echo $id; ?>" href="#delete_student<?php echo $id; ?>" data-toggle="modal"    class="btn btn-danger"><i class="icon-trash icon-large"></i></a>
                                         <?php include('carnet_delete_modal.php'); ?>
 										<a  rel="tooltip"  title="Editar" id="e<?php echo $id; ?>" href="carnet_edit.php<?php echo '?id='.$id; ?>" class="btn btn-success"><i class="icon-pencil icon-large"></i></a>
 										
                                     </td>
-									       <td width="20"><p><strong>Marque aqu&iacute; primero</strong></p>
-                                                <input id="" class="uniform_on" name="selector[]" type="checkbox" value="<?php echo $id; ?>" >
-                                                
+									                                                    
                                     </td>
                                     </div>
 									<?php  }  ?>
                                 </tbody>
                             </table>
-							
-
+	<div id="generator">
+     para obtener c&oacute;digo Ingrese <b>CEDULA</b> (s&oacute;lo n&uacute;meros) :
+      
+       <input type="text" id="barcodeValue" value="12345670">
+    </div> 						
+    <div class="submit">
+        <input type="button" onclick="generateBarcode();" value="Generar el codigo de barras">
+    </div>
 			</div>		
 	
 <script>		
@@ -80,9 +85,13 @@ $(".uniform_on").change(function(){
   <head>
     <style>
      #generator {
-        margin-left: 120px;
+        /*position: relative;*/
+        margin-left: 1em;
      }
         
+     #barcodeValue {
+        width: 100px;
+     }   
       #config{
         clear: both;
 
@@ -106,8 +115,9 @@ $(".uniform_on").change(function(){
       #miscCanvas{
         display: none;
       }
-      #submit{
-          clear: both;
+      .submit{
+          /*clear: both;*/
+          position: relative;
       }
       #barcodeTarget,
       #canvasTarget{
@@ -188,10 +198,7 @@ $(".uniform_on").change(function(){
     </script>
   </head>
   <body>
-    <div id="generator">
-      Por favor ingrese la <b>CEDULA</b> (solo numeros) :
-      
-       <input type="text" id="barcodeValue" value="12345670">
+
       <div id="config">
         <div class="config">
           
@@ -215,9 +222,7 @@ $(".uniform_on").change(function(){
         
       </div>
         
-      <div id="submit">
-        <input type="button" onclick="generateBarcode();" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generar el codigo de barras &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">
-      </div>
+      
         
     </div>
     
