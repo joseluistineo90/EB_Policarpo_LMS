@@ -6,7 +6,7 @@
 			<div class="">	
 				<div  class="span6">	
 
-						<div class="alert alert-info"><strong>CARNETS (BORRE despu&eacute;s de imprimir)</strong></div>
+						<div class="alert alert-info"><strong> AGREGUE CARNET LLENE LOS DATOS, GENERE CODIGO DE BARRA IMPRIMA Y BORRE </strong></div>
 						<div class="pull-right">
 								<a href="" onclick="window.print()" class="btn btn-info"><i class="icon-print icon-large"></i> Imprima</a>
 								</div>
@@ -17,25 +17,26 @@
 								                                
                                 <tbody>
 								 
-                                  <?php  $user_query=mysql_query("select * from carnet 
+                        <?php  
+                        $user_query=mysql_query("select * from carnet 
 								   ")or die(mysql_error());
-									while($row=mysql_fetch_array($user_query)){
-									$id=$row['carnet_id'];
-									
-									?>
-									<hr>
-                                    <div class="logo_carnet" ></div>
-                                    <div class ="fondo_carnet"><p class="centrar"><b>BIBLIOTECA PUBLICA RAFAEL VICENTE EGUI</b></p>
-                                    <h4 class="centrar">(CARNET DE USUARIO)</h4>
+						while($row=mysql_fetch_array($user_query)){
+						$id=$row['carnet_id'];
+						$ruta=$row["ruta"];
+                        $ruta2=$row["ruta_miniatura"];
+						?>
+						<hr>
+                        
+                        <div class ="fondo_carnet"><p><b>BIBLIOTECA PUBLICA RAFAEL VICENTE EGUI</br>(CARNET DE USUARIO)</p>
 									<div class="del<?php echo $id ?>">
-                                    <div class="foto_carnet"><?php echo $row['imagen'];?></div><br>
+                                    <div class="foto_carnet"><img src="<?php echo $ruta2 //mostramos la miniaturas?>" width="120" height="120"></div><br>
                                     <div class="margen"><b>Nombres</b></div><div class="margen"><?php echo $row['firstname_carnet']." ". $row['lastname_carnet'];?></div>
-								    <div class="cedula"><b> C.I </b><?php echo $row['cedula_carnet'];?></div> 
+								    <div class="margen"><b> C.I </b><?php echo $row['cedula_carnet'];?></div> 
 									<div class="margen"><b>DIRECCION</b></div><div class="margen"><?php echo $row['address_carnet']; ?></div> 
                                     <div class="margen"><b>Email</b></div><div class="margen"><?php echo $row['email_carnet']; ?> </div>
-									<div class="margen"><b>Tlf </b></div><div class="margen"><?php echo $row['contact_carnet'];?></div><div class="margen"><b>Grado</b></div><div class="margen"><?php echo $row['year_level_carnet'];?></div>
+									<div class="margen"><b>Tlf </b></div><div class="margen"><?php echo $row['contact_carnet'];?></div>
                                     <div id="barcodeTarget" class="barcodeTarget"></div>
-    <canvas id="canvasTarget" width="100" height="100"></canvas>
+                                    <canvas id="canvasTarget" width="100" height="100"></canvas>
 									</div>
 									
 
@@ -48,7 +49,7 @@
                                     </td>
 									                                                    
                                     </td>
-                                    </div>
+                                    </div><br>
 									<?php  }  ?>
                                 </tbody>
                             </table>
@@ -120,9 +121,10 @@ $(".uniform_on").change(function(){
           position: relative;
       }
       #barcodeTarget,
-      #canvasTarget{
-       margin-top: -60px;
-        margin-left: 390px;
+      #canvasTarget {
+        position: absolute;
+       margin-top: -3.5em;
+       margin-left: 390px;
       }        
     </style>
     

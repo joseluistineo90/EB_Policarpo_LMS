@@ -2011,28 +2011,39 @@ legend + .control-group {
 
 }
 .fondo_carnet {  
+/*position: relative;*/
+  width: 570px;
+  height: 330px;
   margin-bottom: 1px;
-   background-image: url(../images/5.jpg);
+  background-image: url(../images/5.jpg);*/
   opacity: .8;
   background-repeat: no-repeat;
-  background-color: #fff;
+  background-color: white;
+  
+}
 
+.fondo_carnet p {
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: .7em;
 }
 .cedula {
-  float: right;
-  padding-right: 40px;
-  margin-bottom: 20px;
+  margin-left: 1em;
 }
 .foto_carnet {
-  width: 120px;
-  height: 120px;
-  background-color: gray;
-  float: right;
-  margin-right: 15px;
-  margin-bottom: 5px;
+  box-sizing: border-box;
+ background: gray;
+ width: 123px;
+ height: 123px;
+  position: absolute;
+  margin-left: 30em;
+ float: right;
+ margin-right: 2em;
+ margin-bottom: 5em;
 }
 .margen {
-  margin-left: 10px;
+  line-height: 1.6em;
+  margin-left: 15px;
 }
 table {
   max-width: 100%;
@@ -2050,7 +2061,7 @@ table {
 .table td {
   padding: 8px;
   line-height: 20px;
-  text-align: left;
+  /*text-align: left;*/
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }
@@ -2983,7 +2994,10 @@ table th[class*="span"],
   background-color: #e5e5e5;
   border-bottom: 1px solid #ffffff;
 }
-
+pagina {
+  clear: both;
+  
+}
 .dropdown-menu > li > a {
   display: block;
   padding: 3px 20px;
@@ -3964,7 +3978,7 @@ input[type="submit"].btn.btn-mini {
 
 .alert-info {
   color: #FBF6F6;
-  background-color: #D04A4A;
+  background-color: #B71107;
   border-color: #bce8f1;
 }
 
@@ -4820,7 +4834,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inverse .navbar-inner {
-  background: #751816;
+  background: #309820;
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
 }

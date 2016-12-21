@@ -14,9 +14,9 @@
 
                                 <thead>
                                     <tr>
-                                        <th>Título del Libro</th> 
+                                        <th>Nº Reg ) Título</th> 
                                         <th>Cota</th>                                
-                                        <th>Prestatario</th>                           
+                                        <th>Prestatario / CI.</th>                           
                                         <th>Fecha préstamo</th>                 
                                         <th>Fecha entrega</th>                             <th>Fecha devolución</th>
 										<th>Status del préstamo</th>
@@ -37,9 +37,7 @@
 				
 									?>
 									<tr class="del<?php echo $id ?>">
-									
-									                              
-                                    <td><?php echo $row['book_title']; ?></td>
+									<td><?php echo $row['book_id'].") ".$row['book_title']; ?></td>                              
                                     <td><?php echo $row['book_pub']; ?></td>
                                     <td><?php echo $row['firstname']." ".$row['lastname']." CI.".$row['cedula']; ?></td>
                                     

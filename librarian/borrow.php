@@ -43,7 +43,7 @@
 				</div>
 				</div>
 				<div class="span8">
-						<div class="alert alert-success"><strong>Para préstamo selecione <b>MÁXIMO </b> 3 Libros en el recuadro "AGREGAR" elija nombre del prestatario <br> (debe ser usuario ya previamente registrado), seleccione la fecha de entrega en el calendario a la izquierda y luego al botón PRESTAR.</strong></div>
+						<div class="alert alert-success"><strong>PASO 1. -> Para préstamo selecione <b>MÁXIMO </b> 3 Libros en el recuadro "AGREGAR", (ojo con los que digan excluir de préstamo) PASO 2. -> elija nombre del prestatario <br> (debe ser usuario ya previamente registrado), PASO 3. -> Seleccione la fecha de entrega en el calendario a la izquierda y PASO 4. -> dele clic al botón PRESTAR.</strong></div>
 						<div class="pull-right">
 								<a href="" onclick="window.print()" class="btn btn-info"><i class="icon-print icon-large"></i> Imprimir</a>
 								</div>

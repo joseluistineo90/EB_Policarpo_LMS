@@ -33,7 +33,7 @@
 										<th>Editorial</th>
 										<th>ISBN</th>
 										<th>Año Copyright</th>	
-										<th class="action">status</th>
+										<th class="action">estatus</th>
                                     </tr>
                                 </thead>
                                 <tbody>

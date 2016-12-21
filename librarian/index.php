@@ -5,7 +5,7 @@
 			<div class="row">	
 			<div class="span12">
 					<div class="sti">
-						<img src="../LMS/E.B. Magalona.png" class="img-rounded">
+						<img src="../LMS/banner.png" class="img-rounded">
 					</div>
 				<div class="login">
 				<div class="log_txt">

@@ -13,17 +13,19 @@ $author = $_POST['author'];
 			<div class="span12">	
 			   <div class="alert alert-info">
                                     <button type="button" class="close" data-dismiss="alert">&times;</button>
-                                    <strong><i class="icon-user icon-large"></i>&nbsp;Tabla de Libros</strong>
+                                    <strong><i class="icon-user icon-large"></i>&nbsp;Tabla de  búsqueda avanzada</strong>
                                 </div>
 						<!--  -->
 								    <ul class="nav nav-pills">
 										<li   class="active"><a href="books.php">Todo</a></li>
 										
 										<li><a href="new_books.php">Libros Nuevos</a></li>
-										<li><a href="old_books.php">Libros Antiguos</a></li>
+										<li><a href="old_books.php">Excluir de Pr&eacute;stamos</a></li>
 										<li><a href="lost.php">Libros perdidos</a></li>
 										<li><a href="damage.php">Libros dañados</a></li>
 										<li><a href="sub_rep.php">Libros en restauración</a></li>
+										<li><a href="ficha.php">Ficha Bibliogr&aacute;fica</a></li>
+
 									</ul>
 						<!--  -->
 						<center class="title">
@@ -31,9 +33,9 @@ $author = $_POST['author'];
 						</center>
                             <table cellpadding="0" cellspacing="0" border="0" class="table  table-bordered" id="example">
 								<div class="pull-right">
-								<a href="" onclick="window.print()" class="btn btn-info"><i class="icon-print icon-large"></i> Print</a>
+								<a href="" onclick="window.print()" class="btn btn-info"><i class="icon-print icon-large"></i> Imprimir</a>
 								</div>
-								<p><a href="add_books.php" class="btn btn-success"><i class="icon-plus"></i>&nbsp;Add Books</a></p>
+								<p><a href="add_books.php" class="btn btn-success"><i class="icon-plus"></i>&nbsp;Agregar Libros</a></p>
 							
                                 <thead>
                                     <tr>
@@ -41,13 +43,13 @@ $author = $_POST['author'];
                                         <th>Título</th>                                 
                                         <th>Categoría</th>
 										<th>Autor</th>
-										<th class="action">copias</th>
-										<th>Book Pub</th>
-										<th>Editorial</th>
-										<th>ISBN</th>
-										<th>Año Copyright r</th>
+										<th class="action">Edici&oacute;n / Ciudad </th>
+										<th>Cota</th>
+										<th>Editorial / págs</th>
+										<th>ISBN / ISSN</th>
+										<th>Año Copyright</th>
 										<th>Fecha de Agregado</th>
-										<th>Status</th>
+										<th>Estatus</th>
 										<th class="action">Acción</th>		
                                     </tr>
                                 </thead>
@@ -79,9 +81,9 @@ $author = $_POST['author'];
                                     <td><?php echo $row['book_title']; ?></td>
 									<td><?php echo $cat_row ['classname']; ?> </td>
                                     <td><?php echo $row['author']; ?> </td> 
-                                    <td class="action"><?php echo /* $row['book_copies']; */   $total;   ?> </td>
+                                    <td><?php echo $row['edition']." ed. /".$row['city']; ?></td>
                                      <td><?php echo $row['book_pub']; ?></td>
-									 <td><?php echo $row['publisher_name']; ?></td>
+									 <td><?php echo $row['publisher_name']." /".$row['pages']." p."; ?></td>
 									 <td><?php echo $row['isbn']; ?></td>
 									 <td><?php echo $row['copyright_year']; ?></td>		
 									 <td><?php echo $row['date_added']; ?></td>

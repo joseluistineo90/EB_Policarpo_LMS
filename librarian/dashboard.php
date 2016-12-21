@@ -20,7 +20,8 @@
     	
     </head>
     <body>
-    	<h1 align="center">Sistema digitalizado de Gesti&oacute;n de Bibliotecas</h1>
+
+    	<h2 align="center">FRONTINO Sistema digitalizado de Gesti&oacute;n de Bibliotecas</h2>
     	<a href="http://josetineocv.arredemo.org/" target="_blank"><h4 align="center"<b>Desarrollo y dise&ntilde;o : Jos&eacute; Luis Tineo Castro (UCV)</b></h4></a>
     	<h6 align="center">joseluistineo90@gmail.com &#169; Derechos reservados y pol&iacute;tica de privacidad</h6>
     </body>

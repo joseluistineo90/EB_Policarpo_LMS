@@ -57,23 +57,11 @@
 		</div>
 		
 			
-		<div class="control-group">
-			<label class="control-label" for="inputPassword">Nivel de Instrucci&oacute;n:</label>
-			<div class="controls">
-				<select name="year_level_carnet" required>			
-									<option><?php echo $row['year_level_carnet']; ?></option>
-									<option>Escuela B&aacute;sica (primera etapa)</option>
-									<option>Escuela B&aacute;sica(segunda etapa)</option>
-									<option>Bachillerato (Ciclo b&aacute;sico)</option>
-									<option>Bachillerato (Ciclo diversificado)</option>
-									<option>Universidad</option>
-				</select>
-			</div>
-		</div>
+		
 			<div class="control-group">
 			<label class="control-label" for="inputPassword">Foto:</label>
 			<div class="controls">
-			<input type="file" id="inputPassword" name="imagen"  placeholder="no mayor a 300Kb">
+			<input type="file" id="inputPassword" name="archivo"  placeholder="no mayor a 300Kb">
 			</div>
 		</div>	
 		<div class="control-group">

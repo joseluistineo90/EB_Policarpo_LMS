@@ -52,26 +52,10 @@
 			<input type='tel' pattern="[0-9]{11,11}" class="search" name="contact_carnet"  placeholder="Tel&eacute;fono"  autocomplete="off"  maxlength="11" >
 			</div>
 		</div>
-		<div class="control-group">
-			<label class="control-label" for="inputPassword">Grado de Instrucci&oacute;n:</label>
-			<div class="controls">
-				<select name="year_level_carnet" >
-					
-
-									<option> </option>
-									<option>Escuela B&aacute;sica (primera etapa)</option>
-									<option>Escuela B&aacute;sica (segunda etapa)</option>
-									<option>Bachillerato (ciclo b&aacute;sico)</option>
-									<option>Bachillerato (ciclo diversificado)</option>
-									<option>Universidad</option>
-									<option>TSU</option>
-				</select>
-			</div>
-		</div>
 			<div class="control-group">
 			<label class="control-label" for="inputPassword">Foto:</label>
 			<div class="controls">
-			<input type="file" id="inputPassword" name="imagen"  size="50">
+			<input type="file" id="inputPassword" name="archivo"  size="50">
 			</div>
 		</div>
 				

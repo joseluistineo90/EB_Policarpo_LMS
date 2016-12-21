@@ -1,7 +1,7 @@
 		<div class="span12">
 				<div class="header">
 				<div class="pull-left">
-				<img class="stilogo" src="LMS/E.B. Magalona.png">
+				<img class="stilogo" src="LMS/banner.png">
 				</div>
 				</div>
 

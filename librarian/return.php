@@ -14,7 +14,7 @@
 								
                                 <thead>
                                     <tr>
-                                        <th>Título</th>
+                                        <th>Nº Reg) Título</th>
                                         <th>Cota</th>                                  
                                         <th>Prestatario</th>                                                  <th>cedula</th>                                
                                         <th>Fecha préstamo</th>                                 
@@ -38,8 +38,8 @@
 									?>
 									<tr class="del<?php echo $id ?>">
 									
-									                              
-                                    <td><?php echo $row['book_title']; ?></td>
+									<td><?php echo $row['book_id'].") ".$row['book_title']; ?></td>                              
+                                    
                                     <td><?php echo $row['book_pub']; ?></td>
                                     <td><?php echo $row['firstname']." ".$row['lastname']; ?></td>
                                     

@@ -15,6 +15,5 @@
 <p>Fax:</p>
 <p>*** xxxxxxxxxxxx *** </p>
 
-	</div>
-			
-	
+	</div><br><br> <?php // aside del twitter a la izquierda ?>
+<a class="twitter-timeline" data-lang="es" data-width="240" data-height="650" data-link-color="#FAB81E" href="https://twitter.com/bibliopmiranda1">Tweets by bibliopmiranda1</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

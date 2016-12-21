@@ -43,24 +43,40 @@
 	<input type="text"  class="span4" id="inputPassword" name="author"  placeholder="Autor" required>
 			</div>
 		</div>
-		
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Colección:</label>
+			<div class="controls">
+			<input type="text" class="span4" id="inputPassword" name="colection" placeholder="colección" >
+			</div></div><br>
 
 		<div class="control-group">
-			<label class="control-label" for="inputPassword">Ejemplar:</label>
+			<label class="control-label" for="inputPassword">Volúmen:</label>
 			<div class="controls">
-			<input type="number" class="span1" id="inputPassword" name="book_copies"  placeholder="e.1" required>
+			<input type="number" class="span1" id="inputPassword" name="book_copies" min="0"  placeholder="e.1" >
 			</div><br>
 			<div class="control-group">
-			<label class="control-label" for="inputPassword">volumen:</label>
+			<label class="control-label" for="inputPassword">Páginas:</label>
 			<div class="controls">
-			<input type="number" name="volumen" min="1" max="100" placeholder="campo no obligatorio">
+			<input type="number"  class="span1" id="inputPassword" name="pages" min ="1" placeholder= "Nº de páginas" required>
 			</div></div>
 		</div>
-		
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Tipo de documento:</label>
+			<div class="controls">
+			<select name="type">
+				
+				<option>Texto Impreso</option>
+				<option>Revista</option>
+				<option>Folleto</option>
+				<option>Digital</option>
+				<option>otro</option>
+			</select>
+			</div>
+		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputPassword"><b>COTA</b></label>
 			<div class="controls">
-			<input type="text"  class="span4" id="inputPassword" name="book_pub"  placeholder="cota" required>
+			<input type="text"  class="span4" id="inputPassword" name="book_pub"  placeholder="cota" >
 			</div>
 		</div>
 		<div class="control-group">
@@ -70,15 +86,27 @@
 			</div>
 		</div>
 		<div class="control-group">
-			<label class="control-label" for="inputPassword">Isbn:</label>
+			<label class="control-label" for="inputPassword">Edición:</label>
 			<div class="controls">
-			<input type="text"  class="span4" id="inputPassword" name="isbn"  placeholder="ISBN" required>
+			<input type="number" class="span1" id="inputPassword" name="edition" value="<?php echo $row['edition']; ?>" placeholder="Edición Nº" min="1" >
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">ISBN / ISSN</label>
+			<div class="controls">
+			<input type="text"  class="span4" id="inputPassword" name="isbn"  placeholder="ISBN ó ISSN" required>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputPassword">Año Copyright :</label>
 			<div class="controls">
-			<input type="text" id="inputPassword" name="copyright_year"  placeholder="Año Copyright " required>
+			<input type="number" id="inputPassword" name="copyright_year"  placeholder="Año Copyright " required>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Ciudad :</label>
+			<div class="controls">
+			<input type="text" id="inputPassword" name="city"  placeholder="ciudad " required>
 			</div>
 		</div>
 		<div class="control-group">
@@ -87,14 +115,25 @@
 			<select name="status" required>
 				<option></option>
 				<option>Nuevo</option>
-				<option>Antiguo</option>
+				<option>Excluir de préstamo</option>
 				<option>Perdido</option>
-				<option>Deteriorado</option>
+				<option>Dañado</option>
 				<option>Para Restaurar</option>
 			</select>
 			</div>
 		</div>
-		
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Clasificación :</label>
+			<div class="controls">
+			<input type="text"  class="span4" id="inputPassword" name="clasifications"   placeholder="clasificación Dewey" >
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Observaciones :</label>
+			<div class="controls">
+			<textarea cols="10" rows="5" id="inputPassword" name="observations"   placeholder="campo no obligatorio "> </textarea>
+			</div>
+		</div>
 		
 		<div class="control-group">
 			<div class="controls">

@@ -2,8 +2,8 @@
     <footer class="footer">
       <div class="container">
 	  <div class="foot-margin">
-        <p><a> <?php echo date ('Y'); ?> &nbsp; Biblioteca P&uacute;blica Rafael Vicente Egui (Charallave-Miranda).Derechos reservados y pol&iacute;tica de privacidad.<a href="http://josetineocv.arredemo.org/" target="_blank"> Desarrollo y dise&nacute;o Jos&eacute; Luis Tineo </a></p>
-      </div>
+        <p>&nbsp;<img src="../LMS/apple-touch-icon-76x76.png">&nbsp;<a><?php echo date ('Y'); ?> &nbsp; Sistema de Gesti&oacute;n de Bibliotecas Frontino. &#169; Derechos reservados y pol&iacute;tica de privacidad.<a href="http://josetineocv.arredemo.org/" target="_blank"> Desarrollo y dise&ntilde;o Jos&eacute; Luis Tineo </a>
+      </div></p>
       </div>
     </footer>
 	

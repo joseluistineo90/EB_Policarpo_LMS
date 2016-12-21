@@ -44,21 +44,39 @@
 			</div>
 		</div>
 		<div class="control-group">
-			<label class="control-label" for="inputPassword">Ejemplar:</label>
+			<label class="control-label" for="inputPassword">Colección:</label>
 			<div class="controls">
-			<input type="number" class="span1" id="inputPassword" name="book_copies"  placeholder="e.1" value="<?php echo $row['book_copies']; ?>" required>
+			<input type="text" class="span4" id="inputPassword" name="colection" value="<?php echo $row['colection'];?>" placeholder="colección" >
+			</div></div>
+
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Volúmen:</label>
+			<div class="controls">
+			<input type="number" class="span1" id="inputPassword" name="book_copies" min="0" placeholder="e.1" value="<?php echo $row['book_copies']; ?>" >
 			</div><br>
 			<div class="control-group">
-			<label class="control-label" for="inputPassword">volumen:</label>
+			<label class="control-label" for="inputPassword">Páginas:</label>
 			<div class="controls">
-			<input type="number" name="volumen" value="<?php echo $row['volumen']; ?>" min="1" max="100" placeholder="campo no obligatorio">
+			<input type="number" class="span1" name="pages" value="<?php echo $row['pages']; ?>"  placeholder="Nº e páinas" min="1" required>
 			</div></div>
 		</div>
-		
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Tipo de documento:</label>
+			<div class="controls">
+			<select name="type">
+				<option><?php echo $row['type']; ?></option>
+				<option>Texto Impreso</option>
+				<option>Revista</option>
+				<option>Folleto</option>
+				<option>Digital</option>
+				<option>otro</option>
+			</select>
+			</div>
+		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputPassword"><b>COTA</b>:</label>
 			<div class="controls">
-			<input type="text" class="span4"  id="inputPassword" name="book_pub" value="<?php echo $row['book_pub']; ?>" placeholder="book_pub" required>
+			<input type="text" class="span4"  id="inputPassword" name="book_pub" value="<?php echo $row['book_pub']; ?>" placeholder="COTA" >
 			</div>
 		</div>	
 		<div class="control-group">
@@ -68,32 +86,54 @@
 			</div>
 		</div>
 		<div class="control-group">
-			<label class="control-label" for="inputPassword">Isbn:</label>
+			<label class="control-label" for="inputPassword">Edición:</label>
 			<div class="controls">
-			<input type="text" class="span4" id="inputPassword" name="isbn" value="<?php echo $row['isbn']; ?>" placeholder="isbn" required>
+			<input type="number" class="span1" id="inputPassword" name="edition" value="<?php echo $row['edition']; ?>" placeholder="Edición Nº" min="1" >
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">ISBN / ISNN</label>
+			<div class="controls">
+			<input type="text" class="span4" id="inputPassword" name="isbn" value="<?php echo $row['isbn']; ?>" placeholder="ISBN ó ISSN" required>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputPassword">Año Copyright:</label>
 			<div class="controls">
-			<input type="text" id="inputPassword" name="copyright_year" value="<?php echo $row['copyright_year']; ?>" placeholder="Año copyright" required>
+			<input type="number" id="inputPassword" name="copyright_year" value="<?php echo $row['copyright_year']; ?>" placeholder="Año copyright" required>
 			</div>
 		</div>
-		
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Ciudad :</label>
+			<div class="controls">
+			<input type="text" id="inputPassword" name="city" value="<?php echo $row['city'];?>"  placeholder="ciudad " required>
+			</div>
+		</div>
 		<div class="control-group">
 			<label class="control-label" for="inputPassword">Status:</label>
 			<div class="controls">
 			<select name="status">
 				<option><?php echo $row['status']; ?></option>
 				<option>Nuevo</option>
-				<option>Antiguo</option>
+				<option>Excluir de préstamo</option>
 				<option>Perdido</option>
-				<option>Deteriorado</option>
+				<option>Dañado</option>
 				<option>Para restaurar</option>
 			</select>
 			</div>
 		</div>
-		
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Clasificación :</label>
+			<div class="controls">
+			<input type="text"  class="span4" id="inputPassword" name="clasifications" value="<?php echo $row['clasifications'];?>"  placeholder="clasificación Dewey" >
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Observaciones :</label>
+			<div class="controls">
+			<textarea cols="10" rows="5" id="inputPassword" name="observations" value="<?php echo $row['observations'];?>"  placeholder="campo no obligatorio "> </textarea>
+			</div>
+		</div>
 		
 		<div class="control-group">
 			<div class="controls">

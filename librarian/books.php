@@ -13,10 +13,11 @@
 								    <ul class="nav nav-pills">
 										<li   class="active"><a href="books.php">All</a></li>
 										<li><a href="new_books.php">Libros Nuevos</a></li>
-										<li><a href="old_books.php">Libros Antiguos</a></li>
+										<li><a href="old_books.php">Excluir de préstamo</a></li>
 										<li><a href="lost.php">Libros perdidos</a></li>
 										<li><a href="damage.php">Libros dañados</a></li>
 										<li><a href="sub_rep.php">Libros en restauración</a></li>
+										<li><a href="ficha.php">Ficha Bibliográfica</a></li>
 									</ul>
 						<!--  -->
 						<center class="title">
@@ -34,13 +35,13 @@
                                         <th> Título</th>                                 
                                         <th>Categoría</th>
 										<th>Autor</th>
-										<th class="action">Ejemplar / Vol</th>
+										<th class="action">Volumen / Nº págs</th>
 										<th><b>COTA</b></th>
-										<th>Editorial</th>
-										<th>ISBN</th>
-										<th>Año Copyright</th>
+										<th>Editorial / Edición</th>
+										<th>ISBN / ISSN</th>
+										<th>Año / Ciudad </th>
 										<th>Fecha de registro</th>
-										<th>Status</th>
+										<th>Estatus</th>
 										<th class="action">Acción</th>		
                                     </tr>
                                 </thead>
@@ -70,11 +71,11 @@
                                     <td><?php echo $row['book_title']; ?></td>
 									<td><?php echo $cat_row ['classname']; ?> </td>
                                     <td><?php echo $row['author']; ?> </td> 
-                                    <td><?php  echo $row['book_copies']." / Vol. ".$row['volumen'];?> </td>
+                                    <td><?php echo $row['book_copies']." / pags: ".$row['pages']." p.";?> </td>
                                      <td><?php echo $row['book_pub']; ?></td>
-									 <td><?php echo $row['publisher_name']; ?></td>
+									 <td><?php echo $row['publisher_name']."/ ed. ".$row['edition']; ?></td>
 									 <td><?php echo $row['isbn']; ?></td>
-									 <td><?php echo $row['copyright_year']; ?></td>		
+									 <td><?php echo $row['copyright_year']." / ".$row['city']; ?></td>		
 									 <td><?php echo $row['date_added']; ?></td>
 									 <td><?php echo $row['status']; ?></td>
 									<?php include('toolttip_edit_delete.php'); ?>

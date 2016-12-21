@@ -7,6 +7,7 @@
 				<div class="span2">
 					<?php include('sidebar.php'); ?>
 				</div>
+				
 				<div class="span10">
 					<?php include('slider.php'); ?>
 				</div>

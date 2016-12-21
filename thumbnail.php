@@ -3,7 +3,7 @@
 					<li>
 						<a href="">
 							<img src="images/books1.jpg" />
-							<div><span>Estanteria</span></div>
+							<div><span>SISTEMA DE GESTION DE BIBLIOTECAS FRONTINO v1.2</span></div>
 						</a>
 					</li>
 					<li>
